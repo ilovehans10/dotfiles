@@ -17,7 +17,7 @@ alias vi="nvim"
 alias vim="nvim"
 alias vimrc="nvim ~/.vimrc"
 alias config="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
-alias lsd="du -d 0 -h"
+alias lsd="du -d 1 -h"
 
 # Theme
 ZSH_THEME="agnoster"
