@@ -21,6 +21,7 @@ empty_tag_color = "black"
 
 [global]
 colors_enabled = "yes"
+browser_display_mode = "columns"
 main_window_color = "default"
 centered_cursor = "yes"
 enable_window_title = "yes"
