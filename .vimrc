@@ -21,9 +21,9 @@ filetype plugin indent on
 
 augroup spelling | au!
   "Turns on spellcheck on text files
-  au BufEnter * set spell
-  au BufEnter *.span set spelllang=es,en_us
-  au BufEnter *.zsh set nospell
+  au BufEnter * setlocal spell
+  au BufEnter *.span setlocal spelllang=es,en_us
+  au BufEnter *.zsh setlocal nospell
 augroup end
 
 autocmd BufWritePre * %s/\s\+$//e
@@ -38,8 +38,9 @@ if has('nvim')
 
   augroup myterm | au!
     au TermOpen * if &buftype ==# 'terminal' | vert resize 75 | endif
-    au TermOpen * if &buftype ==# 'terminal' | set nonumber norelativenumber | endif
-    au BufEnter * if &buftype ==# 'terminal' | startinsert
+    au BufEnter * if &buftype ==# 'terminal' | setlocal nonumber norelativenumber | endif
+    au BufEnter * if &buftype ==# 'terminal' | startinsert | endif
+    au BufEnter * if &buftype ==# 'terminal' | setlocal nospell | endif
   augroup end
 endif
 
