@@ -77,7 +77,7 @@ nnoremap <Leader>k :set paste<CR>m`O<Esc>``:set nopaste<CR>
 nnoremap <Leader>w g<C-g>
 vnoremap <Leader>w g<C-g>
 nnoremap <Leader>s :set spell!<CR>
-nnoremap <Leader>S :SSave<CR>
+nnoremap <LocalLeader>S :SSave<CR>
 nnoremap <leader>ev :vsplit ~/.vimrc<cr>
 nnoremap <Leader>h :set hlsearch!<CR>
 "Allow saving of files with sudo when needed
