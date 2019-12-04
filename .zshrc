@@ -1,4 +1,5 @@
-export ZSH="${HOME}/.oh-my-zsh"
+export ZSH="${HOME}/.config/.oh-my-zsh"
+source "${HOME}/.iterm2_shell_integration.zsh"
 export LC_ALL="en_US.UTF-8"
 source ~/.zplug/init.zsh
 
