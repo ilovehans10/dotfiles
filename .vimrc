@@ -51,6 +51,12 @@ augroup myvimrchooks | au!
 augroup END
 
 
+" Add function to fix joining empty lines
+noremap J :call J()<cr>
+function! J()
+    if getline(line('.')+1)=="" | exe 'normal gJ' | else | join | endif
+endfunction
+
 " Fix j and k moving over long lines
 nnoremap j gj
 nnoremap k gk
