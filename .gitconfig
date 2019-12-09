@@ -16,3 +16,5 @@
 	prompt = false
 [core]
 	excludesfile = ~/.config/git/global_gitignore
+[credential]
+	helper = cache --timeout=3600
