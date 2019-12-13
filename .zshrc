@@ -41,3 +41,17 @@ zplug load
 # Source oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 source ~/.config/zsh/bindings
+
+build_prompt() {
+  RETVAL=$?
+  prompt_status
+  prompt_virtualenv
+  prompt_aws
+  prompt_dir
+  prompt_git
+  prompt_bzr
+  prompt_hg
+  prompt_end
+}
+
+PROMPT='%{%f%b%k%}$(build_prompt) '
