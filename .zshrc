@@ -1,4 +1,9 @@
-export ZSH="${HOME}/.oh-my-zsh"
+local OS=$(uname -s)
+case $OS in
+  Darwin) export ZSH="${HOME}/.config/.oh-my-zsh"
+          source "${HOME}/.iterm2_shell_integration.zsh";;
+  Linux)  export ZSH="${HOME}/.oh-my-zsh";;
+esac
 export LC_ALL="en_US.UTF-8"
 source ~/.zplug/init.zsh
 
@@ -22,7 +27,10 @@ alias config="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias lsd="du -d 1 -h"
 
 # Theme
-ZSH_THEME="agnoster"
+case $OS in
+  Darwin) ZSH_THEME="agnoster";;
+  Linux) ZSH_THEME="";;
+esac
 
 # Plugins
 plugins=(
@@ -40,3 +48,19 @@ zplug load
 # Source oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 source ~/.config/zsh/bindings
+
+if [[ $OS=Darwin ]]; then
+build_prompt() {
+  RETVAL=$?
+  prompt_status
+  prompt_virtualenv
+  prompt_aws
+  prompt_dir
+  prompt_git
+  prompt_bzr
+  prompt_hg
+  prompt_end
+}
+
+PROMPT='%{%f%b%k%}$(build_prompt) '
+fi
