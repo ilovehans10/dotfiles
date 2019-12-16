@@ -35,9 +35,10 @@ esac
 # Plugins
 plugins=(
   git
-  history-substring-search
+  taskwarrior
   vi-mode
   zsh-autosuggestions
+  history-substring-search
 )
 
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
