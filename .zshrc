@@ -10,7 +10,7 @@ ENABLE_CORRECTION="true"
 # Variables
 export EDITOR="nvim"
 export BROWSER="Firefox"
-export PATH="$HOME/.gem/ruby/2.6.0:$HOME/Documents/RubyMine/bin:$PATH"
+export PATH="$HOME/.scripts:$HOME/.scripts/i3cmds:$HOME/.gem/ruby/2.6.0/bin:$HOME/Documents/RubyMine/bin:$PATH"
 export ZDOTDIR="$HOME/.cache/oh-my-zsh"
 export LESSHISTFILE=/dev/null
 
@@ -20,9 +20,12 @@ alias vim="nvim"
 alias vimrc="nvim ~/.vimrc"
 alias config="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias lsd="du -d 1 -h"
+alias sp="sudo pacman"
+alias mkdir="mkdir -pv"
+alias ls="ls --color=always -h --group-directories-first"
 
 # Theme
-ZSH_THEME="agnoster"
+ZSH_THEME="spaceship"
 
 # Plugins
 plugins=(
