@@ -15,7 +15,7 @@ ENABLE_CORRECTION="true"
 # Variables
 export EDITOR="nvim"
 export BROWSER="Firefox"
-export PATH="$HOME/.gem/ruby/2.6.0:$HOME/Documents/RubyMine/bin:$PATH"
+export PATH="$HOME/.gem/ruby/2.6.0:$HOME/Documents/RubyMine/bin/:/usr/local/sbin:$PATH"
 export ZDOTDIR="$HOME/.cache/oh-my-zsh"
 export LESSHISTFILE=/dev/null
 
