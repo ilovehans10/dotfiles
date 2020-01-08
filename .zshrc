@@ -15,7 +15,10 @@ ENABLE_CORRECTION="true"
 # Variables
 export EDITOR="nvim"
 export BROWSER="Firefox"
-export PATH="$HOME/.gem/ruby/2.6.0:$HOME/Documents/RubyMine/bin/:/usr/local/sbin:$PATH"
+case $OS in
+  Darwin) export PATH="$HOME/.gem/ruby/2.6.0/bin:$HOME/Documents/RubyMine/bin:/usr/local/sbin:$PATH";;
+  Linux)  export PATH="$HOME/.gem/ruby/2.6.0/bin:$HOME/Documents/RubyMine/bin:$HOME/.scripts:$HOME/.scripts/i3cmds:$PATH";;
+esac
 export ZDOTDIR="$HOME/.cache/oh-my-zsh"
 export LESSHISTFILE=/dev/null
 
@@ -25,11 +28,14 @@ alias vim="nvim"
 alias vimrc="nvim ~/.vimrc"
 alias config="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias lsd="du -d 1 -h"
+alias sp="sudo pacman"
+alias mkdir="mkdir -pv"
+alias ls="ls --color=always -h --group-directories-first"
 
 # Theme
 case $OS in
   Darwin) ZSH_THEME="agnoster";;
-  Linux) ZSH_THEME="";;
+  Linux) ZSH_THEME="spaceship";;
 esac
 
 # Plugins
@@ -50,18 +56,17 @@ zplug load
 source $ZSH/oh-my-zsh.sh
 source ~/.config/zsh/bindings
 
-if [[ $OS=Darwin ]]; then
-build_prompt() {
-  RETVAL=$?
-  prompt_status
-  prompt_virtualenv
-  prompt_aws
-  prompt_dir
-  prompt_git
-  prompt_bzr
-  prompt_hg
-  prompt_end
-}
-
+if [[ $OS = Darwin ]]; then
+  build_prompt() {
+    RETVAL=$?
+    prompt_status
+    prompt_virtualenv
+    prompt_aws
+    prompt_dir
+    prompt_git
+    prompt_bzr
+    prompt_hg
+    prompt_end
+  }
 PROMPT='%{%f%b%k%}$(build_prompt) '
 fi

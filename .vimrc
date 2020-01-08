@@ -158,6 +158,7 @@ call plug#begin('~/.vim/bundle')
   Plug 'Valloric/YouCompleteMe'
   Plug 'arzg/vim-corvine'
   Plug 'mhinz/vim-startify'
+  Plug 'wellle/context.vim'
 "  Plug 'roman/golden-ratio'
 call plug#end()
 
