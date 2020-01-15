@@ -16,21 +16,11 @@ ENABLE_CORRECTION="true"
 export EDITOR="nvim"
 export BROWSER="Firefox"
 case $OS in
-  Darwin) export PATH="$HOME/.gem/ruby/2.6.0/bin:$HOME/Documents/RubyMine/bin:/usr/local/sbin:$PATH";;
-  Linux)  export PATH="$HOME/.gem/ruby/2.6.0/bin:$HOME/Documents/RubyMine/bin:$HOME/.scripts:$HOME/.scripts/i3cmds:$PATH";;
+  Darwin) export PATH="$HOME/.gem/ruby/2.6.0:$HOME/Documents/RubyMine/bin:/usr/local/sbin:/usr/local/lib/ruby/gems/2.6.0/bin:$PATH";;
+  Linux)  export PATH="$HOME/.gem/ruby/2.6.0:$HOME/Documents/RubyMine/bin:$HOME/.scripts:$HOME/.scripts/i3cmds:$PATH";;
 esac
 export ZDOTDIR="$HOME/.cache/oh-my-zsh"
 export LESSHISTFILE=/dev/null
-
-# Aliases
-alias vi="nvim"
-alias vim="nvim"
-alias vimrc="nvim ~/.vimrc"
-alias config="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
-alias lsd="du -d 1 -h"
-alias sp="sudo pacman"
-alias mkdir="mkdir -pv"
-alias ls="ls --color=always -h --group-directories-first"
 
 # Theme
 case $OS in
@@ -70,3 +60,13 @@ if [[ $OS = Darwin ]]; then
   }
 PROMPT='%{%f%b%k%}$(build_prompt) '
 fi
+
+# Aliases
+alias vi="nvim"
+alias vim="nvim"
+alias vimrc="nvim ~/.vimrc"
+alias config="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+alias lsd="du -d 1 -h"
+alias sp="sudo pacman"
+alias mkdir="mkdir -pv"
+alias ls="ls --color=always -h --group-directories-first"
