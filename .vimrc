@@ -7,7 +7,7 @@ set backspace=indent,eol,start
 set history=200
 set relativenumber number
 set wildmenu
-set timeout timeoutlen=3000 ttimeoutlen=100
+set timeout timeoutlen=1000 ttimeoutlen=100
 set tabstop=2 shiftwidth=2 expandtab
 set scrolloff=5
 set linebreak
