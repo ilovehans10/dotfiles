@@ -153,7 +153,7 @@ call plug#begin('~/.vim/bundle')
   Plug 'jceb/vim-orgmode'
   Plug 'tpope/vim-surround'
   Plug 'danchoi/ri.vim'
-"  Plug 'chrisbra/Colorizer'
+  Plug 'terryma/vim-multiple-cursors'
   Plug 'mhinz/vim-startify'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
