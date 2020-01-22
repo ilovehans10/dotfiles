@@ -87,6 +87,7 @@ if has('nvim')
     au BufEnter * if &buftype ==# 'terminal' | setlocal nonumber norelativenumber | endif
     au BufEnter * if &buftype ==# 'terminal' | startinsert | endif
     au BufEnter * if &buftype ==# 'terminal' | setlocal nospell | endif
+    au BufEnter * if &buftype ==# 'terminal' | setlocal signcolumn=no | endif
   augroup end
 endif
 
@@ -129,6 +130,7 @@ vnoremap <leader>w g<C-g>
 nnoremap <leader>s :set spell!<CR>
 nnoremap <Localleader>S :SSave<CR>
 nnoremap <leader>ev :vsplit ~/.vimrc<cr>
+nnoremap <leader>ez :vsplit ~/.zshrc<cr>
 nnoremap <leader>h :set hlsearch!<CR>
 "Allow saving of files with sudo when needed
 cmap w!! w !sudo tee > /dev/null %
