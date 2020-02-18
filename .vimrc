@@ -158,6 +158,7 @@ call plug#begin('~/.vim/bundle')
   Plug 'terryma/vim-multiple-cursors'
   Plug 'mhinz/vim-startify'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'honza/vim-snippets'
 call plug#end()
 
 let g:airline_powerline_fonts = 1
