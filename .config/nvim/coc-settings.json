@@ -1,0 +1,16 @@
+{
+  "codeLens.enable": true,
+  "solargraph.useBundler": true,
+  // make vim select first item on completion
+  "suggest.noselect": true,
+
+  "languageserver": {
+    "efm": {
+      "command": "efm-langserver",
+      "args": [],
+      // custom config path
+      // "args": ["-c", "/path/to/your/config.yaml"],
+      "filetypes": ["vim", "markdown"]
+    }
+  }
+}
