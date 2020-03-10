@@ -1,4 +1,5 @@
 {
+  "solargraph.promptUpdate": false,
   "codeLens.enable": true,
   "solargraph.useBundler": true,
   // make vim select first item on completion
