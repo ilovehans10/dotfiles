@@ -23,10 +23,9 @@ export ZDOTDIR="$HOME/.cache/oh-my-zsh"
 export LESSHISTFILE=/dev/null
 
 # Theme
-case $OS in
-  Darwin) ZSH_THEME="agnoster";;
-  Linux) ZSH_THEME="spaceship";;
-esac
+if [[ $OS = Darwin ]]; then
+   ZSH_THEME="agnoster"
+fi
 
 # Plugins
 plugins=(
@@ -37,13 +36,15 @@ plugins=(
   history-substring-search
 )
 
+# Source oh-my-zsh
+source $ZSH/oh-my-zsh.sh
+
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "b4b4r07/zsh-vimode-visual", defer:3
+zplug "denysdovhan/spaceship-prompt", use:spaceship.zsh, from:github, as:theme
 
 zplug load
 
-# Source oh-my-zsh
-source $ZSH/oh-my-zsh.sh
 source ~/.config/zsh/bindings
 
 if [[ $OS = Darwin ]]; then
@@ -66,9 +67,13 @@ alias vi="nvim"
 alias vim="nvim"
 alias vimrc="nvim ~/.vimrc"
 alias zshrc="nvim ~/.zshrc"
+
 alias config="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+alias rangerr="ranger --choosedir=/tmp/.rangerdir; LASTDIR=\`cat /tmp/.rangerdir\`; cd '$LASTDIR'"
+alias sss="sudo systemctl suspend"
+alias lg="lazygit"
+
 alias lsd="du -d 1 -h"
 alias ls="ls --color=always -h --group-directories-first"
 alias sp="sudo pacman"
 alias mkdir="mkdir -pv"
-alias lg="lazygit"
