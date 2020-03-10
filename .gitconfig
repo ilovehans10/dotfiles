@@ -12,6 +12,7 @@
 	ui = auto
 [diff]
 	tool = vimdiff
+	submodule = log
 [difftool]
 	prompt = false
 [core]
