@@ -16,7 +16,7 @@ ENABLE_CORRECTION="true"
 export EDITOR="nvim"
 export BROWSER="Firefox"
 case $OS in
-  Darwin) export PATH="/usr/local/lib/ruby/gems/2.7.0/gems:$HOME/Documents/RubyMine/bin:$HOME/go/bin:/usr/local/sbin:/usr/local/lib/ruby/gems/2.6.0/bin:$PATH";;
+  Darwin) export PATH="/usr/local/Cellar/ruby/2.7.0/bin:/usr/local/lib/ruby/gems/2.7.0/gems:$HOME/Documents/RubyMine/bin:$HOME/go/bin:/usr/local/sbin:/usr/local/lib/ruby/gems/2.6.0/bin:$PATH";;
   Linux)  export PATH="/usr/local/lib/ruby/gems/2.6.0/gems:$HOME/Documents/RubyMine/bin:$HOME/go/bin:$HOME/.scripts:$HOME/.scripts/i3cmds:$PATH";;
 esac
 export ZDOTDIR="$HOME/.cache/oh-my-zsh"
@@ -68,6 +68,7 @@ alias vimrc="nvim ~/.vimrc"
 alias zshrc="nvim ~/.zshrc"
 alias config="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias lsd="du -d 1 -h"
+alias ls="ls --color=always -h --group-directories-first"
 alias sp="sudo pacman"
 alias mkdir="mkdir -pv"
-alias ls="ls --color=always -h --group-directories-first"
+alias lg="lazygit"
