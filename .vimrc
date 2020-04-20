@@ -141,6 +141,7 @@ nnoremap <leader>s :set spell!<CR>
 nnoremap <Localleader>S :SSave<CR>
 nnoremap <leader>ev :vsplit ~/.vimrc<cr>
 nnoremap <leader>ez :vsplit ~/.zshrc<cr>
+nnoremap <leader>s 1z=
 nnoremap <leader>h :set hlsearch!<CR>
 "Allow saving of files with sudo when needed
 cmap w!! w !sudo tee > /dev/null %
