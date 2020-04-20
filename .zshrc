@@ -70,6 +70,7 @@ alias zshrc="nvim ~/.zshrc"
 
 alias config="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias rangerr="ranger --choosedir=/tmp/.rangerdir; LASTDIR=\`cat /tmp/.rangerdir\`; cd '$LASTDIR'"
+alias yey="yes | yay"
 alias sss="sudo systemctl suspend"
 alias lg="lazygit"
 
