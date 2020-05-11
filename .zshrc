@@ -70,6 +70,7 @@ alias zshrc="nvim ~/.zshrc"
 
 alias config="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias ra="ranger --choosedir=/tmp/.rangerdir; LASTDIR=\`cat /tmp/.rangerdir\`; cd \"\$LASTDIR\""
+alias recentminecraft="grep \"lastLaunchTime\" .local/share/multimc/instances/*/instance.cfg | sed -En \"s/^.*instances\/(.*)\/instance.*lastLaunchTime=(.*)/\2 \1/p\" | sort -r | head -n 1 | sed -En \"s/[0-9]* //p\" | xargs multimc --launch & disown"
 alias yey="yes | yay"
 alias sss="sudo systemctl suspend"
 alias lg="lazygit"
