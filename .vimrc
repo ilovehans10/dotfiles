@@ -170,6 +170,7 @@ call plug#begin('~/.vim/bundle')
   Plug 'mhinz/vim-startify'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'honza/vim-snippets'
+  Plug 'RRethy/vim-hexokinase'
 call plug#end()
 
 let g:airline_powerline_fonts = 1
